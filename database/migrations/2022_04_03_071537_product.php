@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
         });
+
         Schema::create('product', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('type_id') -> references('id')->on('product_type');
