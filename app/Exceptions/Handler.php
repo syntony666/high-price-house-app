@@ -38,4 +38,13 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function report(Throwable $e)
+    {
+        dd($e);
+        parent::report($e);
+    }
 }
